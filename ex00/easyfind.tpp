@@ -1,6 +1,7 @@
 
 #include <iostream>
 #include <vector>
+#include <algorithm>
 
 // template <typename T>
 // void easyfind(T &container, int value)
@@ -21,7 +22,7 @@ int* easyfind(T &container, int value)
 	while (it != container.end())
 	{
 		if (*it == value)
-			return &(*it);
+			return &(*it); // return a pointer to the value which is dereferenced from the iterator it
 		++it;
 	}
 	throw std::exception();
