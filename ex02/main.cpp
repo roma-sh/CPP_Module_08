@@ -35,6 +35,7 @@ int main()
 		std::cout << *it_begin << std::endl;
 		++it_begin;
 	}
+	std::stack<int> s(myStack);
 	return 0;
 }
 

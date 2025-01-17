@@ -19,6 +19,10 @@ class Span
 		int shortestSpan();
 		int longestSpan();
 		void fill(unsigned int n);
+		void addRange(std::vector<int>::iterator begin, std::vector<int>::iterator end);
+		void print_v();
+		std::vector<int>::iterator begin();
+		std::vector<int>::iterator end();
 
 		class FullException : public std::exception
 		{

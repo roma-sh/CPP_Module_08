@@ -56,6 +56,43 @@ int main()
 	{
 		std::cout << e.what() << std::endl;
 	}
+	std::cout << std::endl << "----------------" << std::endl << std::endl;
+	// test adding a range
+	Span sp4 = Span(10);
+	std::vector<int> v;
+	v.push_back(1);
+	v.push_back(2);
+	v.push_back(3);
+	v.push_back(4);
+	v.push_back(5);
+	v.push_back(6);
+	v.push_back(7);
+	v.push_back(8);
+	v.push_back(9);
+	v.push_back(10);
+	v.push_back(11);
+	std::cout << "Vector v: ";
+	for (std::vector<int>::iterator it = v.begin(); it != v.end(); it++)
+		std::cout << *it << " ";
+	std::cout << std::endl;
+	try
+	{
+		sp4.addRange(v.begin() + 1, v.end() - 3);
+		std::cout << "Vector sp4 after adding range: ";
+		sp4.print_v();
+		std::cout << std::endl;
+	}
+	catch (std::exception &e)
+	{
+		std::cout << e.what() << std::endl;
+	}
+
+	Span sp5(12);
+	sp5.addRange(sp4.begin(), sp4.end());
+
+	std::cout << "Vector sp5 after adding range: ";
+	sp5.print_v();
+	std::cout << std::endl;
 
 	return 0;
 }
