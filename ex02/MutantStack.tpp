@@ -31,9 +31,10 @@ public:
 
 	iterator begin()
 	{
-		return std::stack<T>::c.begin();
+		return std::stack<T>::c.begin(); // member is a protected member of the
+		//std::stack template that represents the underlying container used to store the elements of the stack.
 	}
-	
+
 	iterator end()
 	{
 		return std::stack<T>::c.end();
